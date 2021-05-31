@@ -1,0 +1,10 @@
+decision_optimization_client.Client
+==================
+
+.. toctree::
+   :maxdepth: 2
+
+.. autoclass:: decision_optimization_client.Client()
+    :members:
+    :show-inheritance:
+    :special-members: __init__

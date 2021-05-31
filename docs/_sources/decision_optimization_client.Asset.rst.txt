@@ -1,0 +1,8 @@
+decision_optimization_client.Asset
+=================
+
+.. toctree::
+   :maxdepth: 2
+
+.. autoclass:: decision_optimization_client.Asset()
+    :members:

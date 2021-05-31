@@ -1,0 +1,11 @@
+Exceptions
+==========
+
+decision_optimization_client.NotBoundException
+-----------------------------
+
+.. toctree::
+   :maxdepth: 2
+
+.. autoclass:: decision_optimization_client.NotBoundException()
+    :members:
