@@ -4,7 +4,7 @@ Licensed under the Apache License v2.0.
 
 ## Get the documentation
 
-* [Documentation](https://pages.github.com/IBMDecisionOptimization/decision-optimization-client-doc/)
+* [Documentation](https://ibmdecisionoptimization.github.io/decision-optimization-client-doc/)
 
 ## License
 
