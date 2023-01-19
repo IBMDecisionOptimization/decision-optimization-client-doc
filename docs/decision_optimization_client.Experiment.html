@@ -1,71 +1,39 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>decision_optimization_client.Experiment &mdash; decision_optimization_client 1.0 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>decision_optimization_client.Experiment &mdash; decision_optimization_client 1.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="decision_optimization_client.Asset" href="decision_optimization_client.Asset.html" />
     <link rel="prev" title="decision_optimization_client.Client" href="decision_optimization_client.Client.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> decision_optimization_client
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                1.0
+                1.1.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -73,20 +41,21 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="decision_optimization_client.Client.html">decision_optimization_client.Client</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">decision_optimization_client.Experiment</a><ul class="simple">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">decision_optimization_client.Experiment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#decision_optimization_client.Experiment"><code class="docutils literal notranslate"><span class="pre">Experiment</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Experiment.name"><code class="docutils literal notranslate"><span class="pre">Experiment.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Experiment.description"><code class="docutils literal notranslate"><span class="pre">Experiment.description</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Experiment.create_container"><code class="docutils literal notranslate"><span class="pre">Experiment.create_container()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Experiment.create_scenario"><code class="docutils literal notranslate"><span class="pre">Experiment.create_scenario()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Experiment.delete_container"><code class="docutils literal notranslate"><span class="pre">Experiment.delete_container()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Experiment.get_containers"><code class="docutils literal notranslate"><span class="pre">Experiment.get_containers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Experiment.get_scenario"><code class="docutils literal notranslate"><span class="pre">Experiment.get_scenario()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Experiment.get_scenarios"><code class="docutils literal notranslate"><span class="pre">Experiment.get_scenarios()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="decision_optimization_client.Asset.html">decision_optimization_client.Asset</a></li>
@@ -97,90 +66,52 @@
 <li class="toctree-l1"><a class="reference internal" href="Exceptions.html">Exceptions</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">decision_optimization_client</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>decision_optimization_client.Experiment</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">decision_optimization_client.Experiment</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="_sources/decision_optimization_client.Experiment.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="decision-optimization-client-experiment">
-<h1>decision_optimization_client.Experiment<a class="headerlink" href="#decision-optimization-client-experiment" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="decision-optimization-client-experiment">
+<h1>decision_optimization_client.Experiment<a class="headerlink" href="#decision-optimization-client-experiment" title="Permalink to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<dl class="class">
-<dt id="decision_optimization_client.Experiment">
-<em class="property">class </em><code class="sig-prename descclassname">decision_optimization_client.</code><code class="sig-name descname">Experiment</code><a class="headerlink" href="#decision_optimization_client.Experiment" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
-<dt id="decision_optimization_client.Experiment.name">
-<code class="sig-name descname">name</code><a class="headerlink" href="#decision_optimization_client.Experiment.name" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="decision_optimization_client.Experiment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">decision_optimization_client.</span></span><span class="sig-name descname"><span class="pre">Experiment</span></span><a class="headerlink" href="#decision_optimization_client.Experiment" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="decision_optimization_client.Experiment.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#decision_optimization_client.Experiment.name" title="Permalink to this definition"></a></dt>
 <dd><p>Name of the experiment</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="decision_optimization_client.Experiment.description">
-<code class="sig-name descname">description</code><a class="headerlink" href="#decision_optimization_client.Experiment.description" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="decision_optimization_client.Experiment.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#decision_optimization_client.Experiment.description" title="Permalink to this definition"></a></dt>
 <dd><p>Description of the experiment</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Experiment.create_container">
-<code class="sig-name descname">create_container</code><span class="sig-paren">(</span><em class="sig-param">category=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Experiment.create_container" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Experiment.create_container">
+<span class="sig-name descname"><span class="pre">create_container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Experiment.create_container" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a <a class="reference internal" href="decision_optimization_client.Container.html#decision_optimization_client.Container" title="decision_optimization_client.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">Container</span></code></a> whose parent is this
 Experiment.</p>
 <p>Currently supported categories are:</p>
@@ -209,9 +140,9 @@ constructor. For example, you can pass params such as
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Experiment.create_scenario">
-<code class="sig-name descname">create_scenario</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Experiment.create_scenario" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Experiment.create_scenario">
+<span class="sig-name descname"><span class="pre">create_scenario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Experiment.create_scenario" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a new <a class="reference internal" href="decision_optimization_client.Container.html#decision_optimization_client.Container" title="decision_optimization_client.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">Container</span></code></a> attached as a
 scenario  of this <a class="reference internal" href="#decision_optimization_client.Experiment" title="decision_optimization_client.Experiment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Experiment</span></code></a>.</p>
 <dl class="field-list simple">
@@ -236,9 +167,9 @@ constructor.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Experiment.delete_container">
-<code class="sig-name descname">delete_container</code><span class="sig-paren">(</span><em class="sig-param">container</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Experiment.delete_container" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Experiment.delete_container">
+<span class="sig-name descname"><span class="pre">delete_container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">container</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Experiment.delete_container" title="Permalink to this definition"></a></dt>
 <dd><p>Deletes the specified <a class="reference internal" href="decision_optimization_client.Container.html#decision_optimization_client.Container" title="decision_optimization_client.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">Container</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -247,15 +178,15 @@ constructor.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Experiment.get_containers">
-<code class="sig-name descname">get_containers</code><span class="sig-paren">(</span><em class="sig-param">category=None</em>, <em class="sig-param">as_dict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Experiment.get_containers" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Experiment.get_containers">
+<span class="sig-name descname"><span class="pre">get_containers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Experiment.get_containers" title="Permalink to this definition"></a></dt>
 <dd><p>Returns containers of the specified category in this <a class="reference internal" href="#decision_optimization_client.Experiment" title="decision_optimization_client.Experiment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Experiment</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>category</strong> – The category of <a class="reference internal" href="decision_optimization_client.Container.html#decision_optimization_client.Container" title="decision_optimization_client.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">Container</span></code></a>. Must be <code class="docutils literal notranslate"><span class="pre">'inputset'</span></code>,
-<code class="docutils literal notranslate"><span class="pre">'scenario'</span></code> or <code class="docutils literal notranslate"><span class="pre">'model'</span></code>.</p></li>
+<li><p><strong>category</strong> – The category of <a class="reference internal" href="decision_optimization_client.Container.html#decision_optimization_client.Container" title="decision_optimization_client.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">Container</span></code></a>. Can be
+<code class="docutils literal notranslate"><span class="pre">'scenario'</span></code> or <code class="docutils literal notranslate"><span class="pre">'dashboard'</span></code>.</p></li>
 <li><p><strong>as_dict</strong> – If True, the containers are returned as a dict where its keys
 are the container names and its values are containers.</p></li>
 </ul>
@@ -267,9 +198,9 @@ container names to <a class="reference internal" href="decision_optimization_cli
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Experiment.get_scenario">
-<code class="sig-name descname">get_scenario</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Experiment.get_scenario" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Experiment.get_scenario">
+<span class="sig-name descname"><span class="pre">get_scenario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Experiment.get_scenario" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the scenario for the specified name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -288,9 +219,9 @@ container names to <a class="reference internal" href="decision_optimization_cli
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Experiment.get_scenarios">
-<code class="sig-name descname">get_scenarios</code><span class="sig-paren">(</span><em class="sig-param">as_dict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Experiment.get_scenarios" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Experiment.get_scenarios">
+<span class="sig-name descname"><span class="pre">get_scenarios</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">as_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Experiment.get_scenarios" title="Permalink to this definition"></a></dt>
 <dd><p>Returns scenarios of this <a class="reference internal" href="#decision_optimization_client.Experiment" title="decision_optimization_client.Experiment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Experiment</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -306,55 +237,37 @@ container names to <a class="reference internal" href="decision_optimization_cli
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="decision_optimization_client.Asset.html" class="btn btn-neutral float-right" title="decision_optimization_client.Asset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="decision_optimization_client.Client.html" class="btn btn-neutral float-left" title="decision_optimization_client.Client" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="decision_optimization_client.Client.html" class="btn btn-neutral float-left" title="decision_optimization_client.Client" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="decision_optimization_client.Asset.html" class="btn btn-neutral float-right" title="decision_optimization_client.Asset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018, IBM®
-
-    </p>
+    <p>&#169; Copyright 2018, 2023 IBM®.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

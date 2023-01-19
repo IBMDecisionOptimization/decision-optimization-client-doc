@@ -1,71 +1,39 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>decision_optimization_client.Container &mdash; decision_optimization_client 1.0 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>decision_optimization_client.Container &mdash; decision_optimization_client 1.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="decision_optimization_client.Table" href="decision_optimization_client.Table.html" />
     <link rel="prev" title="decision_optimization_client.Asset" href="decision_optimization_client.Asset.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> decision_optimization_client
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                1.0
+                1.1.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -73,22 +41,40 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="decision_optimization_client.Client.html">decision_optimization_client.Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decision_optimization_client.Experiment.html">decision_optimization_client.Experiment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decision_optimization_client.Asset.html">decision_optimization_client.Asset</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">decision_optimization_client.Container</a><ul class="simple">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">decision_optimization_client.Container</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#decision_optimization_client.Container"><code class="docutils literal notranslate"><span class="pre">Container</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.name"><code class="docutils literal notranslate"><span class="pre">Container.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.description"><code class="docutils literal notranslate"><span class="pre">Container.description</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.category"><code class="docutils literal notranslate"><span class="pre">Container.category</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.lineage"><code class="docutils literal notranslate"><span class="pre">Container.lineage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.projectId"><code class="docutils literal notranslate"><span class="pre">Container.projectId</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.add_asset_data"><code class="docutils literal notranslate"><span class="pre">Container.add_asset_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.add_table_data"><code class="docutils literal notranslate"><span class="pre">Container.add_table_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.copy"><code class="docutils literal notranslate"><span class="pre">Container.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.create_asset"><code class="docutils literal notranslate"><span class="pre">Container.create_asset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.delete_asset"><code class="docutils literal notranslate"><span class="pre">Container.delete_asset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.delete_table_data"><code class="docutils literal notranslate"><span class="pre">Container.delete_table_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.export_asset"><code class="docutils literal notranslate"><span class="pre">Container.export_asset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.export_table"><code class="docutils literal notranslate"><span class="pre">Container.export_table()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.get_asset"><code class="docutils literal notranslate"><span class="pre">Container.get_asset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.get_asset_data"><code class="docutils literal notranslate"><span class="pre">Container.get_asset_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.get_assets"><code class="docutils literal notranslate"><span class="pre">Container.get_assets()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.get_status"><code class="docutils literal notranslate"><span class="pre">Container.get_status()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.get_table_data"><code class="docutils literal notranslate"><span class="pre">Container.get_table_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.get_table_type"><code class="docutils literal notranslate"><span class="pre">Container.get_table_type()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.get_tables"><code class="docutils literal notranslate"><span class="pre">Container.get_tables()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.get_tables_data"><code class="docutils literal notranslate"><span class="pre">Container.get_tables_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.import_asset"><code class="docutils literal notranslate"><span class="pre">Container.import_asset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.import_table"><code class="docutils literal notranslate"><span class="pre">Container.import_table()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.solve"><code class="docutils literal notranslate"><span class="pre">Container.solve()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision_optimization_client.Container.update_table_type"><code class="docutils literal notranslate"><span class="pre">Container.update_table_type()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="decision_optimization_client.Table.html">decision_optimization_client.Table</a></li>
@@ -97,108 +83,70 @@
 <li class="toctree-l1"><a class="reference internal" href="Exceptions.html">Exceptions</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">decision_optimization_client</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>decision_optimization_client.Container</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">decision_optimization_client.Container</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="_sources/decision_optimization_client.Container.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="decision-optimization-client-container">
-<h1>decision_optimization_client.Container<a class="headerlink" href="#decision-optimization-client-container" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="decision-optimization-client-container">
+<h1>decision_optimization_client.Container<a class="headerlink" href="#decision-optimization-client-container" title="Permalink to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<dl class="class">
-<dt id="decision_optimization_client.Container">
-<em class="property">class </em><code class="sig-prename descclassname">decision_optimization_client.</code><code class="sig-name descname">Container</code><a class="headerlink" href="#decision_optimization_client.Container" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
-<dt id="decision_optimization_client.Container.name">
-<code class="sig-name descname">name</code><a class="headerlink" href="#decision_optimization_client.Container.name" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="decision_optimization_client.Container">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">decision_optimization_client.</span></span><span class="sig-name descname"><span class="pre">Container</span></span><a class="headerlink" href="#decision_optimization_client.Container" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#decision_optimization_client.Container.name" title="Permalink to this definition"></a></dt>
 <dd><p>Name of the container</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="decision_optimization_client.Container.description">
-<code class="sig-name descname">description</code><a class="headerlink" href="#decision_optimization_client.Container.description" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#decision_optimization_client.Container.description" title="Permalink to this definition"></a></dt>
 <dd><p>Description of the container</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="decision_optimization_client.Container.category">
-<code class="sig-name descname">category</code><a class="headerlink" href="#decision_optimization_client.Container.category" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.category">
+<span class="sig-name descname"><span class="pre">category</span></span><a class="headerlink" href="#decision_optimization_client.Container.category" title="Permalink to this definition"></a></dt>
 <dd><p>Category of the container, can be <code class="docutils literal notranslate"><span class="pre">scenario</span></code> or <code class="docutils literal notranslate"><span class="pre">dashboard</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="decision_optimization_client.Container.lineage">
-<code class="sig-name descname">lineage</code><a class="headerlink" href="#decision_optimization_client.Container.lineage" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.lineage">
+<span class="sig-name descname"><span class="pre">lineage</span></span><a class="headerlink" href="#decision_optimization_client.Container.lineage" title="Permalink to this definition"></a></dt>
 <dd><p>If the container has been copied, name of the container that it was copied from</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="decision_optimization_client.Container.projectId">
-<code class="sig-name descname">projectId</code><a class="headerlink" href="#decision_optimization_client.Container.projectId" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.projectId">
+<span class="sig-name descname"><span class="pre">projectId</span></span><a class="headerlink" href="#decision_optimization_client.Container.projectId" title="Permalink to this definition"></a></dt>
 <dd><p>ID of the project the container is a part of</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.add_asset_data">
-<code class="sig-name descname">add_asset_data</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">data=None</em>, <em class="sig-param">category='model'</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.add_asset_data" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.add_asset_data">
+<span class="sig-name descname"><span class="pre">add_asset_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'model'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.add_asset_data" title="Permalink to this definition"></a></dt>
 <dd><p>Adds or updates asset data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -214,9 +162,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.add_table_data">
-<code class="sig-name descname">add_table_data</code><span class="sig-paren">(</span><em class="sig-param">what</em>, <em class="sig-param">data=None</em>, <em class="sig-param">category=None</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.add_table_data" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.add_table_data">
+<span class="sig-name descname"><span class="pre">add_table_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">what</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.add_table_data" title="Permalink to this definition"></a></dt>
 <dd><p>Adds the table data to the container.</p>
 <p>Data must be <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>.</p>
 <p class="rubric">Examples</p>
@@ -240,9 +188,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.copy">
-<code class="sig-name descname">copy</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.copy" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.copy" title="Permalink to this definition"></a></dt>
 <dd><p>Copies this container.</p>
 <dl class="simple">
 <dt>Arg:</dt><dd><p>name (Mandatory): The name of the copy.</p>
@@ -255,9 +203,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.create_asset">
-<code class="sig-name descname">create_asset</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">data=None</em>, <em class="sig-param">category='model'</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.create_asset" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.create_asset">
+<span class="sig-name descname"><span class="pre">create_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'model'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.create_asset" title="Permalink to this definition"></a></dt>
 <dd><p>Creates an asset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -266,9 +214,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.delete_asset">
-<code class="sig-name descname">delete_asset</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.delete_asset" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.delete_asset">
+<span class="sig-name descname"><span class="pre">delete_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.delete_asset" title="Permalink to this definition"></a></dt>
 <dd><p>Deletes the asset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -277,9 +225,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.delete_table_data">
-<code class="sig-name descname">delete_table_data</code><span class="sig-paren">(</span><em class="sig-param">table</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.delete_table_data" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.delete_table_data">
+<span class="sig-name descname"><span class="pre">delete_table_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.delete_table_data" title="Permalink to this definition"></a></dt>
 <dd><p>Deletes table data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -288,16 +236,56 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.get_asset">
-<code class="sig-name descname">get_asset</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_asset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets asset metadata using name.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.export_asset">
+<span class="sig-name descname"><span class="pre">export_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_asset_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_asset_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.export_asset" title="Permalink to this definition"></a></dt>
+<dd><p>Exports scenario asset into a project data asset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>asset</strong> – An asset or asset name as a string.</p></li>
-<li><p><strong>name</strong> – An asset name.</p></li>
+<li><p><strong>asset_name</strong> – The name of the asset in the scenario.</p></li>
+<li><p><strong>project_asset_name</strong> – The name of a new data asset to be created in the project</p></li>
+<li><p><strong>project_asset_id</strong> – The ID of an existing data asset in the project to be overwritten</p></li>
 </ul>
+</dd>
+</dl>
+<p>Only one of <code class="docutils literal notranslate"><span class="pre">project_asset_name</span></code> or <code class="docutils literal notranslate"><span class="pre">project_asset_id</span></code> parameters can be used. If none is provided a new asset is created using the source asset name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>An ID of the resulting project asset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.export_table">
+<span class="sig-name descname"><span class="pre">export_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_asset_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_asset_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.export_table" title="Permalink to this definition"></a></dt>
+<dd><p>Exports a scenario table into a project data asset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> – The name of the table in the scenario</p></li>
+<li><p><strong>project_asset_name</strong> – The name of a new data asset to be created in the project</p></li>
+<li><p><strong>project_asset_id</strong> – The ID of an existing data asset in the project to be overwritten</p></li>
+<li><p><strong>write_mode</strong> – The write mode: <code class="docutils literal notranslate"><span class="pre">append</span></code> or <code class="docutils literal notranslate"><span class="pre">truncate</span></code>. Useful for connected data. Ignored for project assets that do not support it</p></li>
+</ul>
+</dd>
+</dl>
+<p>Only one of <code class="docutils literal notranslate"><span class="pre">project_asset_name</span></code> or <code class="docutils literal notranslate"><span class="pre">project_asset_id</span></code> parameters can be used. If none is provided a new asset is created using the source table name with .csv extension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>An ID of the resulting project asset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.get_asset">
+<span class="sig-name descname"><span class="pre">get_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_asset" title="Permalink to this definition"></a></dt>
+<dd><p>Gets asset metadata using name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – An asset name.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A <a class="reference internal" href="decision_optimization_client.Asset.html#decision_optimization_client.Asset" title="decision_optimization_client.Asset"><code class="xref py py-class docutils literal notranslate"><span class="pre">Asset</span></code></a> instance.</p>
@@ -305,9 +293,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.get_asset_data">
-<code class="sig-name descname">get_asset_data</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_asset_data" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.get_asset_data">
+<span class="sig-name descname"><span class="pre">get_asset_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_asset_data" title="Permalink to this definition"></a></dt>
 <dd><p>Gets asset data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -319,9 +307,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.get_assets">
-<code class="sig-name descname">get_assets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_assets" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.get_assets">
+<span class="sig-name descname"><span class="pre">get_assets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_assets" title="Permalink to this definition"></a></dt>
 <dd><p>Returns asset metadata for all of this container’s assets.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -331,9 +319,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.get_status">
-<code class="sig-name descname">get_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_status" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.get_status">
+<span class="sig-name descname"><span class="pre">get_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_status" title="Permalink to this definition"></a></dt>
 <dd><p>Get the solve status for this scenario</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -342,9 +330,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.get_table_data">
-<code class="sig-name descname">get_table_data</code><span class="sig-paren">(</span><em class="sig-param">table</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_table_data" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.get_table_data">
+<span class="sig-name descname"><span class="pre">get_table_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_table_data" title="Permalink to this definition"></a></dt>
 <dd><p>Gets table data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -356,9 +344,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.get_table_type">
-<code class="sig-name descname">get_table_type</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_table_type" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.get_table_type">
+<span class="sig-name descname"><span class="pre">get_table_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_table_type" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a <a class="reference internal" href="decision_optimization_client.TableType.html#decision_optimization_client.TableType" title="decision_optimization_client.TableType"><code class="xref py py-class docutils literal notranslate"><span class="pre">TableType</span></code></a> descriptor for the
 <a class="reference internal" href="decision_optimization_client.Table.html#decision_optimization_client.Table" title="decision_optimization_client.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a> which name is specified.</p>
 <dl class="field-list simple">
@@ -371,9 +359,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.get_tables">
-<code class="sig-name descname">get_tables</code><span class="sig-paren">(</span><em class="sig-param">category=None</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_tables" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.get_tables">
+<span class="sig-name descname"><span class="pre">get_tables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_tables" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all container table metadata.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -387,9 +375,9 @@ if both input and output tables are to be returned.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.get_tables_data">
-<code class="sig-name descname">get_tables_data</code><span class="sig-paren">(</span><em class="sig-param">category=None</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_tables_data" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.get_tables_data">
+<span class="sig-name descname"><span class="pre">get_tables_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.get_tables_data" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>category</strong> – The category of tables. Can be <code class="docutils literal notranslate"><span class="pre">input</span></code>, <code class="docutils literal notranslate"><span class="pre">output</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code>
@@ -401,9 +389,41 @@ if both input and output tables are to be returned.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.solve">
-<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param">display_log=None</em>, <em class="sig-param">log_lines=25</em>, <em class="sig-param">log_output=None</em>, <em class="sig-param">asynchronous=False</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.solve" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.import_asset">
+<span class="sig-name descname"><span class="pre">import_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_asset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imported_asset_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'input'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.import_asset" title="Permalink to this definition"></a></dt>
+<dd><p>Imports asset from the project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>project_asset_id</strong> – The ID of the project data asset to be imported</p></li>
+<li><p><strong>imported_asset_name</strong> – The name of the new asset in the scenario</p></li>
+<li><p><strong>category</strong> – The category for the asset. Default: <code class="docutils literal notranslate"><span class="pre">input</span></code></p></li>
+<li><p><strong>lineage</strong> – Optional comment about the asset lineage</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.import_table">
+<span class="sig-name descname"><span class="pre">import_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_asset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imported_table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'input'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.import_table" title="Permalink to this definition"></a></dt>
+<dd><p>Imports table from a project data asset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>project_asset_id</strong> – The ID of the project data asset to be imported</p></li>
+<li><p><strong>imported_table_name</strong> – The name of the new table in the scenario</p></li>
+<li><p><strong>category</strong> – The category for the table. Default: <code class="docutils literal notranslate"><span class="pre">input</span></code></p></li>
+<li><p><strong>lineage</strong> – Optional comment about the table lineage</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.solve">
+<span class="sig-name descname"><span class="pre">solve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">display_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asynchronous</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">environment_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.solve" title="Permalink to this definition"></a></dt>
 <dd><p>Solves this scenario.</p>
 <p>If an error occurs and <code class="docutils literal notranslate"><span class="pre">display_log</span></code> is None or not set, this prints
 the last <code class="docutils literal notranslate"><span class="pre">log_lines</span></code> lines of log (default: 25)</p>
@@ -421,6 +441,7 @@ all log lines are displayed.</p></li>
 or None, defaults to sys.stdout.</p></li>
 <li><p><strong>asynchronous</strong> – If true, the solve will be done asynchronously (it won’t wait for it to finish),
 allowing you to do multiple solves in parallel</p></li>
+<li><p><strong>environment_id</strong> – Environment to use to solve this scenario. Useful to override the default environment selected at Decision Optimization Experiment level</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -429,9 +450,9 @@ allowing you to do multiple solves in parallel</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="decision_optimization_client.Container.update_table_type">
-<code class="sig-name descname">update_table_type</code><span class="sig-paren">(</span><em class="sig-param">table_type</em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.update_table_type" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="decision_optimization_client.Container.update_table_type">
+<span class="sig-name descname"><span class="pre">update_table_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decision_optimization_client.Container.update_table_type" title="Permalink to this definition"></a></dt>
 <dd><p>Updates the table type for the specified <a class="reference internal" href="decision_optimization_client.TableType.html#decision_optimization_client.TableType" title="decision_optimization_client.TableType"><code class="xref py py-class docutils literal notranslate"><span class="pre">TableType</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -442,55 +463,37 @@ allowing you to do multiple solves in parallel</p></li>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="decision_optimization_client.Table.html" class="btn btn-neutral float-right" title="decision_optimization_client.Table" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="decision_optimization_client.Asset.html" class="btn btn-neutral float-left" title="decision_optimization_client.Asset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="decision_optimization_client.Asset.html" class="btn btn-neutral float-left" title="decision_optimization_client.Asset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="decision_optimization_client.Table.html" class="btn btn-neutral float-right" title="decision_optimization_client.Table" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018, IBM®
-
-    </p>
+    <p>&#169; Copyright 2018, 2023 IBM®.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
